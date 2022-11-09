@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Nunito+Sans:wght@200&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@700&display=swap");
+
+* {
+    margin: 5px;
+    padding: 2px;
+}
+* body{
+margin: 30px;
+}
+.header h1 {
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-left: 30px;
+    color: #435AE0;
+}
+
+.input_metric_card {
+    background: #F2F4FF;
+    border-radius: 10px;
+}
+
+.input_metric {
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.input_bar {
+    background: #FFFFFF;
+    border: 0.5px solid #435AE0;
+    border-radius: 4px;
+}
+
+.input_bar::placeholder {
+    color: #CCCCCC;
+    text-align: center;
+}
+
+.date {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+.upload_csv{
+    background: #FFFFFF;
+border: 1px solid #435AE0;
+border-radius: 45px;
+}
+
+.upload_csv .upload_span{
+    color:#435AE0 ;
+}
+.submit_button{
+    background: #435AE0;
+border: 1px solid #FFFFFF;
+border-radius: 6px;
+padding: 15px !important;
+}
+.total_cost{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #435AE0;
+}
+.yield_cost{
+    background: #F2F4FF;
+border-radius: 4px;
+}
+.li_tabs{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #333333;
+
+}
+.total{
+    color:#435AE0 ;
+   
+}
+
+/* .circle{
+    box-sizing: border-box;
+
+position: absolute;
+width: 853px;
+height: 853px;
+left: 825px;
+top: 351px;
+border-radius: 50%;
+border: 1px solid #435AE0;
+} */
+.food_image{
+
+position: absolute;
+width: 400px;
+height: 500px;
+left: 983px;
+top: 337px;
+background: url(images/food_image.svg);
+z-index: 999;
+}
+
+.one {
+    
+    position:absolute;
+    z-index:999;
+}
+
+
+.two {
+    position:absolute;
+    z-index:-999;
+}
