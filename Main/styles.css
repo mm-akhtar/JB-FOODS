@@ -64,6 +64,7 @@ border-radius: 45px;
 border: 1px solid #FFFFFF;
 border-radius: 6px;
 padding: 15px !important;
+width: 245px;
 }
 .total_cost{
     font-family: 'Lato';
@@ -126,3 +127,54 @@ z-index: 999;
     position:absolute;
     z-index:-999;
 }
+.upload_button{
+    background: #FFFFFF;
+    border: 1px dashed #CCCCCC;
+    border-radius: 4px;
+}
+
+.card{
+
+background: #F2F4FF !important;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px !important;
+}
+.table_headings{
+    font-family: 'Lato';
+font-style: normal;
+font-size: 18px !important;
+line-height: 22px;
+
+text-align: center;
+background-color:#6471C7 !important;
+color: #FFFFFF;
+
+}
+.light_blue_row{
+
+background-color: linear-gradient(0deg, #F2F4FF, #F2F4FF), #F2F4FF !important;
+}
+.table-bordered{
+border-color:#435AE0 !important ;
+}
+.table-bordered>:not(caption)>* {
+    border-width: 1px 0;
+    background-color: #F2F4FF;
+}
+.form-control {
+    display: flex !important;
+    width: 90% !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.5px solid #435AE0 !important;
+}
+.table-hover tbody :hover > td {
+    background-color: #F2F4FF !important;
+  }
+  .table-hover tbody :hover > th {
+    background-color: #F2F4FF !important;
+  }
