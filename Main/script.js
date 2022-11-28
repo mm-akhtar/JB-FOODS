@@ -4,8 +4,28 @@ const order = form.elements['orderNumber'];
 const orderCapacity = form.elements['orderCapacity'];
 const startDate = form.elements['startDate'];
 const endDate = form.elements['endDate'];
+const totalCost = document.getElementById('totalCost');
 
 const table = document.getElementById('tableBody');
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+const showModal = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+const hideModal = function() {
+  modal.style.display = "none";
+}
 
 const dataArray = [
 	{
@@ -46,6 +66,15 @@ const dataArray = [
 	},
 ];
 
+const getTotalSum = (value, title) => {
+	const sum = value.reduce((partialSum, a) => partialSum + a[`${title}`], 0);
+	if (sum) {
+		return sum;
+	} else {
+		return 0;
+	}
+};
+
 form.addEventListener('submit', async (event) => {
 	// handle the form data
 	event.preventDefault();
@@ -58,7 +87,10 @@ form.addEventListener('submit', async (event) => {
 		capacity,
 	};
 	console.log(formData);
-	dataset.map((data, index) => {
+	showModal();
+	const total = getTotalSum(dataArray, 'net_weight');
+	totalCost.innerText = total;
+	dataArray.map((data, index) => {
 		let row = document.createElement('tr');
 		if (index % 2 == 0) {
 			row.className = 'text-center bg-white';
@@ -79,7 +111,7 @@ form.addEventListener('submit', async (event) => {
 		c4.innerText = '';
 		c5.innerText = '';
 		c6.innerText = '';
-		c7.innerText = '';
+		c7.innerText = data.net_weight;
 		c8.innerText = data.solver_note;
 		row.appendChild(c1);
 		row.appendChild(c2);
@@ -90,5 +122,8 @@ form.addEventListener('submit', async (event) => {
 		row.appendChild(c7);
 		row.appendChild(c8);
 		table.appendChild(row);
+		setTimeout(() => {
+			hideModal();
+		}, 1000);
 	});
 });
